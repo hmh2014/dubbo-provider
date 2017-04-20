@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="mongo"  class="com.hmh.dubbo.extbeanfactory.MongoFactoryBean" >
+        <property name="serverStrings">
+            <list>
+                <value>localhost:27017</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="morphia" class="com.hmh.dubbo.extbeanfactory.MorphiaFactoryBean"  >
+        <property name="mapPackages">
+            <list>
+                <value>test.hmh.vo</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean  id="dataStore" class="com.hmh.dubbo.extbeanfactory.DataStoreFactoryBean">
+        <property name="morphia" ref="morphia"></property>
+        <property name="mongo" ref="mongo"></property>
+        <property name="dbName" value="person"></property>
+    </bean>
+</beans>
