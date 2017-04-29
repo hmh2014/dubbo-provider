@@ -1,0 +1,5 @@
+test\hmh\vo\Person.class
+test\hmh\service\RedisDemoService.class
+test\hmh\service\MongodbDemoService.class
+test\hmh\service\DubboService.class
+test\hmh\service\IMongoBaseService.class
