@@ -17,6 +17,7 @@
     <dubbo:protocol name="dubbo" port="20880"/>
     <!-- 声明需要暴露的服务接口 -->
     <dubbo:service ref="dubboService" interface="test.hmh.service.DubboService"/>
+    <dubbo:service ref="testService" interface="test.hmh.service.TestService"/>
     <dubbo:service ref="mongodbDemoService" interface="test.hmh.service.MongodbDemoService"/>
     <dubbo:service ref="redisDemoService" interface="test.hmh.service.RedisDemoService"/>
 </beans>
