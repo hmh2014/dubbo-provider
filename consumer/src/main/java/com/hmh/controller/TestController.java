@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import test.hmh.service.DubboService;
+import test.hmh.service.TestService;
 
 import javax.annotation.Resource;
 
@@ -19,10 +20,15 @@ public class TestController {
     @Resource(name = "dubboService")
     private DubboService dubboService;
 
+    @Resource(name = "testService")
+    private TestService testService;
+
     @RequestMapping(value = "/test")
     @ResponseBody
     public String testString() {
         String str = dubboService.hello("hmh");
+        testService.test("hmh");
+        testService.test1("dd");
         return str;
     }
 
