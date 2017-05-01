@@ -14,6 +14,16 @@ public class TestServiceImpl implements TestService {
     }
 
     @Override
+    public void hmh(String name) {
+
+    }
+
+    @Override
+    public void test3(String name) {
+
+    }
+
+    @Override
     public void test(String name) {
         System.out.println( "hello, " + name );
     }
