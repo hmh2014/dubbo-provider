@@ -7,7 +7,9 @@
           <element id="module-output" name="provider" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: test.hmh:app:1.0-SNAPSHOT" />
+          <element id="archive" name="common-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="common" />
+          </element>
           <element id="library" level="project" name="Maven: com.alibaba:dubbo:2.5.3" />
           <element id="library" level="project" name="Maven: org.springframework:spring:2.5.6.SEC03" />
           <element id="library" level="project" name="Maven: org.javassist:javassist:3.15.0-GA" />
