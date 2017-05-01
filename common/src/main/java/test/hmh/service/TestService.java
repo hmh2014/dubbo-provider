@@ -10,4 +10,6 @@ public interface TestService {
     public void test1(String name);
 
     public void hmh(String name);
+
+    public void test3(String name);
 }
